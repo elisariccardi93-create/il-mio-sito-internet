@@ -1,75 +1,165 @@
 <!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV – Elisa Riccardi</title>
+  <meta name="description" content="Curriculum vitae di Elisa Riccardi, UX/UI Designer junior." />
 
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
 
-<!-- Esperienze -->
-<section class="mt-10">
-<h2 class="text-2xl font-serif italic">Esperienze</h2>
-<div class="mt-4 space-y-4">
-<article class="p-4 rounded-2xl border border-gray-200">
-<header class="flex items-center justify-between"><h3 class="font-semibold">Graphic Designer – DSGN Creative Studio</h3><span class="text-sm text-gray-600">2022/23</span></header>
-<ul class="mt-2 text-sm text-gray-700 list-disc pl-5 space-y-1">
-<li>Definizione obiettivi e strategia di comunicazione.</li>
-<li>Brand identity, loghi, banner, grafiche social, newsletter.</li>
-<li>Layout editoriali e merchandising.</li>
-</ul>
-</article>
-<article class="p-4 rounded-2xl border border-gray-200">
-<header class="flex items-center justify-between"><h3 class="font-semibold">Graphic Designer – SpuntoLab</h3><span class="text-sm text-gray-600">2021/22</span></header>
-<ul class="mt-2 text-sm text-gray-700 list-disc pl-5 space-y-1">
-<li>Strategia e obiettivi di comunicazione.</li>
-<li>Brand identity e grafiche per social e newsletter.</li>
-</ul>
-</article>
-<article class="p-4 rounded-2xl border border-gray-200">
-<header class="flex items-center justify-between"><h3 class="font-semibold">Social Media Manager – Social Fit</h3><span class="text-sm text-gray-600">2020/21</span></header>
-<ul class="mt-2 text-sm text-gray-700 list-disc pl-5 space-y-1">
-<li>Piani editoriali per social network e scheduling.</li>
-<li>Copywriting per social, DEM e blog.</li>
-</ul>
-</article>
-</div>
-</section>
+  <!-- Tailwind (SCRIPT, non LINK) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily:{ sans:['Inter','ui-sans-serif','system-ui'], serif:['"Playfair Display"','serif'] },
+          boxShadow:{ soft:'0 10px 24px rgba(0,0,0,.08)', lift:'0 14px 30px rgba(0,0,0,.15)'}
+        }
+      }
+    };
+  </script>
 
+  <!-- (opzionale) tuo CSS: non è necessario per vedere i contenuti -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-white text-zinc-900 antialiased">
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-zinc-200">
+    <div class="mx-auto max-w-3xl px-4 py-3 flex items-center justify-between">
+      <a href="./index.html#home" class="flex items-center gap-2 font-extrabold tracking-tight">
+        <span class="inline-grid place-items-center w-9 h-9 rounded-xl bg-black text-yellow-400 text-sm">ER</span>
+        <span class="hidden sm:inline">Elisa Riccardi</span>
+      </a>
+      <nav class="flex gap-3 text-sm font-medium">
+        <a href="./index.html#work" class="px-3 py-2 rounded-lg hover:bg-zinc-100 transition">Work</a>
+        <a href="./index.html#contatti" class="px-3 py-2 rounded-lg hover:bg-zinc-100 transition">Contattami</a>
+        <a href="./cv.html" class="px-3 py-2 rounded-lg bg-black text-yellow-400">CV</a>
+      </nav>
+    </div>
+  </header>
 
-<!-- Formazione -->
-<section class="mt-10">
-<h2 class="text-2xl font-serif italic">Formazione</h2>
-<ul class="mt-4 text-sm text-gray-700 space-y-2">
-<li><strong>Master in UX/UI Design</strong> – Start2Impact (online) – <em>2023 – in corso</em></li>
-<li><strong>Corso di Specializzazione – Digital Marketing</strong> – Start2Impact – <em>2021</em></li>
-<li><strong>Laurea Triennale – Economia dell’Impresa</strong> – Alma Mater Studiorum, Bologna – <em>2015–2019</em></li>
-<li><strong>Diploma – Grafica Pubblicitaria</strong> – Iris Versari – <em>2007–2012</em></li>
-</ul>
-</section>
+  <!-- MAIN -->
+  <main class="mx-auto max-w-3xl px-4 py-12 sm:py-16">
+    <!-- HERO CV -->
+    <section class="mb-8">
+      <h1 class="text-4xl sm:text-5xl font-extrabold">Curriculum Vitae</h1>
+      <p class="mt-3 text-lg text-zinc-700">UX/UI Designer junior con background in graphic design e comunicazione visiva.</p>
+      <div class="mt-4 flex gap-3">
+        <a href="mailto:elisa.riccardi.93@gmail.com" class="inline-flex items-center px-4 py-2 rounded-lg bg-black text-yellow-400">Contattami</a>
+        <a href="./index.html#home" class="inline-flex items-center px-4 py-2 rounded-lg border border-zinc-200">← Torna al portfolio</a>
+      </div>
+    </section>
 
+    <!-- CARDS TOP -->
+    <section class="grid sm:grid-cols-3 gap-4">
+      <div class="rounded-xl border border-zinc-200 p-4 bg-white shadow-sm">
+        <h2 class="font-serif italic text-xl">Profilo</h2>
+        <ul class="mt-2 text-zinc-700 space-y-1">
+          <li><strong>Nome:</strong> Elisa Riccardi</li>
+          <li><strong>Nata:</strong> 13/08/1993</li>
+          <li><strong>Residenza:</strong> Bellaria Igea-Marina (RN)</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-zinc-200 p-4 bg-white shadow-sm">
+        <h2 class="font-serif italic text-xl">Contatti</h2>
+        <ul class="mt-2 text-zinc-700 space-y-1">
+          <li><strong>Cellulare:</strong> 349 7499634</li>
+          <li><strong>Email:</strong> <a class="underline" href="mailto:elisa.riccardi.93@gmail.com">elisa.riccardi.93@gmail.com</a></li>
+          <li><strong>LinkedIn:</strong> <a class="underline" href="https://www.linkedin.com/in/elisa-riccardi-4a3a74b9/" target="_blank" rel="noopener">Profilo ↗</a></li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-zinc-200 p-4 bg-white shadow-sm">
+        <h2 class="font-serif italic text-xl">Lingue</h2>
+        <ul class="mt-2 text-zinc-700 space-y-1">
+          <li>Italiano — madrelingua</li>
+          <li>Inglese — B1 intermedio</li>
+        </ul>
+      </div>
+    </section>
 
-<!-- Competenze -->
-<section class="mt-10">
-<h2 class="text-2xl font-serif italic">Competenze</h2>
-<div class="mt-4 grid sm:grid-cols-2 gap-3 text-sm text-gray-700">
-<ul class="space-y-1">
-<li>UX Research di base, Wireframing, Prototyping</li>
-<li>UI Design, Design System, Accessibilità</li>
-<li>HTML, CSS</li>
-</ul>
-<ul class="space-y-1">
-<li>Adobe Photoshop, Illustrator, InDesign, XD</li>
-<li>Figma</li>
-<li>Teamwork, problem solving, organizzazione</li>
-</ul>
-</div>
-</section>
+    <!-- ESPERIENZE -->
+    <section class="mt-10">
+      <h2 class="font-serif italic text-2xl">Esperienze</h2>
+      <div class="mt-4 space-y-4">
+        <article class="rounded-xl border border-zinc-200 p-4 bg-white shadow-sm">
+          <header class="flex items-center justify-between gap-4">
+            <h3 class="font-semibold">Graphic Designer – DSGN Creative Studio</h3>
+            <span class="text-sm text-zinc-500">2022/23</span>
+          </header>
+          <ul class="mt-2 list-disc list-inside text-zinc-700 space-y-1">
+            <li>Definizione obiettivi e strategia di comunicazione.</li>
+            <li>Brand identity, loghi, banner, grafiche social, newsletter.</li>
+            <li>Layout editoriali e merchandising.</li>
+          </ul>
+        </article>
+        <article class="rounded-xl border border-zinc-200 p-4 bg-white shadow-sm">
+          <header class="flex items-center justify-between gap-4">
+            <h3 class="font-semibold">Graphic Designer – SpuntoLab</h3>
+            <span class="text-sm text-zinc-500">2021/22</span>
+          </header>
+          <ul class="mt-2 list-disc list-inside text-zinc-700 space-y-1">
+            <li>Strategia e obiettivi di comunicazione.</li>
+            <li>Brand identity e grafiche per social e newsletter.</li>
+          </ul>
+        </article>
+        <article class="rounded-xl border border-zinc-200 p-4 bg-white shadow-sm">
+          <header class="flex items-center justify-between gap-4">
+            <h3 class="font-semibold">Social Media Manager – Social Fit</h3>
+            <span class="text-sm text-zinc-500">2020/21</span>
+          </header>
+          <ul class="mt-2 list-disc list-inside text-zinc-700 space-y-1">
+            <li>Piani editoriali per social network e scheduling.</li>
+            <li>Copywriting per social, DEM e blog.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
+    <!-- FORMAZIONE & COMPETENZE -->
+    <section class="mt-10 grid gap-4 sm:grid-cols-2">
+      <div class="rounded-xl border border-zinc-200 p-4 bg-white shadow-sm">
+        <h2 class="font-serif italic text-xl">Formazione</h2>
+        <ul class="mt-2 text-zinc-700 space-y-1">
+          <li><strong>Master UX/UI Design</strong> — Start2Impact (online) — <em>2023 – in corso</em></li>
+          <li><strong>Spec. Digital Marketing</strong> — Start2Impact — <em>2021</em></li>
+          <li><strong>Laurea Triennale – Economia dell’Impresa</strong> — Bologna — <em>2015–2019</em></li>
+          <li><strong>Diploma – Grafica Pubblicitaria</strong> — Iris Versari — <em>2007–2012</em></li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-zinc-200 p-4 bg-white shadow-sm">
+        <h2 class="font-serif italic text-xl">Competenze</h2>
+        <div class="mt-2 flex flex-wrap gap-2 text-sm">
+          <span class="px-3 py-1 rounded-full border border-zinc-200">UX Research</span>
+          <span class="px-3 py-1 rounded-full border border-zinc-200">Wireframing</span>
+          <span class="px-3 py-1 rounded-full border border-zinc-200">UI Design</span>
+          <span class="px-3 py-1 rounded-full border border-zinc-200">Design System</span>
+          <span class="px-3 py-1 rounded-full border border-zinc-200">Accessibilità</span>
+          <span class="px-3 py-1 rounded-full border border-zinc-200">HTML</span>
+          <span class="px-3 py-1 rounded-full border border-zinc-200">CSS</span>
+          <span class="px-3 py-1 rounded-full border border-zinc-200">Photoshop</span>
+          <span class="px-3 py-1 rounded-full border border-zinc-200">Illustrator</span>
+          <span class="px-3 py-1 rounded-full border border-zinc-200">InDesign</span>
+          <span class="px-3 py-1 rounded-full border border-zinc-200">XD</span>
+          <span class="px-3 py-1 rounded-full border border-zinc-200">Figma</span>
+        </div>
+      </div>
+    </section>
 
-<footer class="mt-12 pt-8 border-t border-gray-200 text-sm text-gray-600">
-<div class="flex items-center justify-between">
-<a class="underline underline-offset-4" href="index.html#home">← Torna al portfolio</a>
-<span>© <span id="yearCV"></span> Elisa Riccardi</span>
-</div>
-</footer>
-</main>
+    <!-- FOOTER -->
+    <footer class="mt-12 pt-8 border-t border-zinc-200 text-sm text-zinc-600">
+      <div class="flex items-center justify-between">
+        <a class="underline" href="./index.html#home">← Torna al portfolio</a>
+        <span>© <span id="yearCV"></span> Elisa Riccardi</span>
+      </div>
+    </footer>
+  </main>
 
-
-<script>document.getElementById('yearCV').textContent = new Date().getFullYear();</script>
+  <!-- inline script (niente file esterni necessari) -->
+  <script>
+    document.getElementById('yearCV').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
