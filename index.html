@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Elisa Riccardi – UX/UI Designer</title>
+<meta name="description" content="Portfolio di Elisa Riccardi, UX/UI Designer junior con esperienza in graphic design. Lavoro, competenze, contatti e CV." />
+<meta name="theme-color" content="#0B0B0B" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B0B0B'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-size='36' font-family='Inter,Arial,sans-serif' fill='%23FACC15'%3EER%3C/text%3E%3C/svg%3E" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'], serif: ['\"Playfair Display\"','serif'] }, colors: { brand: { yellow: '#FACC15', black: '#0B0B0B', gray: '#6B7280' }, }, boxShadow: { soft: '0 10px 24px rgba(0,0,0,0.08)' } } } };</script>
+<style>
+/* Effetto sfondo “cursor-based” — sottile */
+.cursor-glow { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+.cursor-dot { position: absolute; width: 540px; height: 540px; border-radius: 9999px; opacity: .09; filter: blur(60px); background: radial-gradient(circle at center, #FACC15 0%, transparent 60%); transform: translate(-50%, -50%); }
+/* Focus visibile per accessibilità */
+:focus-visible { outline: 3px solid #FACC15; outline-offset: 2px; }
+</style>
+</head>
+<body class="bg-white text-[#0B0B0B] antialiased">
+<!-- sfondo interattivo -->
+<div class="cursor-glow"><div id="cursorDot" class="cursor-dot"></div></div>
+
+
+<!-- Header -->
+<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-200" role="banner">
+<div class="mx-auto max-w-3xl px-4 py-3 flex items-center justify-between">
+<a href="#home" class="flex items-center gap-2 font-extrabold tracking-tight" aria-label="Vai alla home">
+<span class="inline-grid place-items-center w-9 h-9 rounded-xl bg-[#0B0B0B] text-brand-yellow text-sm">ER</span>
+<span class="hidden sm:inline">Elisa Riccardi</span>
+</a>
+<nav aria-label="Navigazione principale" class="flex items-center gap-2 sm:gap-4 text-sm font-medium">
+<a class="px-3 py-2 rounded-lg hover:bg-gray-100 transition" href="#home">Home</a>
+<a class="px-3 py-2 rounded-lg hover:bg-gray-100 transition" href="#work">Work</a>
+<a class="px-3 py-2 rounded-lg hover:bg-gray-100 transition" href="#contatti">Contattami</a>
+<a class="px-3 py-2 rounded-lg hover:bg-gray-100 transition" href="https://www.behance.net/elisariccardi1" target="_blank" rel="noopener">Behance ↗</a>
+<a class="px-3 py-2 rounded-lg bg-[#0B0B0B] text-brand-yellow hover:opacity-90 transition" href="cv.html">CV</a>
+</nav>
+</div>
+</header>
+
+
+<main id="home" class="relative z-10">
+<!-- HERO -->
+<section class="mx-auto max-w-3xl px-4 py-14 sm:py-20">
+</html>
