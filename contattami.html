@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contattami — Elisa Riccardi</title>
+  <link rel="icon" href="img/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] },
+          colors: { primary:'#4F6EE0', ink:'#0f172a', line:'#e2e8f0', soft:'#f8fafc' },
+          boxShadow: { soft:'0 10px 30px rgba(15,23,42,0.06)' }
+        },
+        container:{ center:true, padding:'1rem' }
+      }
+    }
+  </script>
+  <style>
+    :root { --mx: 50%; --my: 50%; }
+    .mouse-bg::before{
+      content:""; position:fixed; inset:0; pointer-events:none; z-index:-1;
+      background: radial-gradient(600px circle at var(--mx) var(--my), rgba(79,110,224,.10), transparent 60%);
+    }
+    @media (prefers-reduced-motion: reduce){ .mouse-bg::before{ background:none; } }
+    :focus-visible{ outline: 3px solid #4F6EE0; outline-offset: 2px; border-radius: 6px; }
+  </style>
+</head>
+<body class="mouse-bg bg-white text-ink font-sans antialiased">
+  <header class="sticky top-0 z-50 border-b border-line/70 bg-white/80 backdrop-blur">
+    <nav class="container max-w-3xl flex items-center justify-between py-3">
+      <a href="index.html" class="inline-flex items-center gap-2 font-extrabold tracking-tight">
+        <span class="inline-grid place-items-center w-8 h-8 rounded bg-primary text-white text-sm font-bold">ER</span>
+        <span class="hidden sm:inline">Elisa Riccardi</span>
+      </a>
+      <a class="text-sm px-3 py-1 rounded border border-line hover:bg-slate-50 transition" href="index.html">← Torna al portfolio</a>
+    </nav>
+  </header>
+
+  <main class="container max-w-3xl py-8 md:py-12">
+    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">Contattami</h1>
+    <p class="mt-2 text-slate-600">Scrivimi qualcosa su di te e sul progetto: ti rispondo presto.</p>
+
+    <form id="contactForm" class="mt-6 grid gap-4" novalidate>
+      <div>
+        <label class="block text-sm font-semibold mb-1" for="name">Nome</label>
+        <input id="name" name="name" required
+               class="w-full rounded border border-line px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold mb-1" for="bio">Biografia breve</label>
+        <textarea id="bio" name="bio" rows="5" required
+                  class="w-full rounded border border-line px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold mb-1" for="skills">Competenze</label>
+        <textarea id="skills" name="skills" rows="4" required placeholder="Es. UX Research, Wireframe, UI, Figma, WCAG"
+                  class="w-full rounded border border-line px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold mb-1" for="behance">Link Behance</label>
+          <input id="behance" name="behance" type="url" required placeholder="https://www.behance.net/…"
+                 class="w-full rounded border border-line px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-1" for="email">Email</label>
+          <input id="email" name="email" type="email" required
+                 class="w-full rounded border border-line px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
+        </div>
+      </div>
+
+      <label class="inline-flex items-start gap-2 text-sm mt-1">
+        <input id="gdpr" type="checkbox" required class="mt-1">
+        <span>Acconsento al trattamento dei dati ai sensi del GDPR per essere ricontattatə.</span>
+      </label>
+
+      <div class="flex items-center gap-3 mt-2">
+        <button class="inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded shadow-soft hover:opacity-90 transition" type="submit">
+          <i class="fa-regular fa-paper-plane"></i> Invia
+        </button>
+        <button class="inline-flex items-center gap-2 border border-line px-4 py-2 rounded hover:bg-slate-50 transition" type="reset">
+          Resetta
+        </button>
+      </div>
+
+      <!-- Messaggi form -->
+      <p id="formMsg" class="text-sm text-slate-600 hidden mt-2"></p>
+    </form>
+
+    <!-- Riepilogo istantaneo -->
+    <section id="preview" class="mt-8 hidden">
+      <h2 class="text-xl font-bold">Anteprima invio</h2>
+      <div class="mt-3 rounded border border-line p-4 bg-soft">
+        <dl class="grid sm:grid-cols-2 gap-3 text-sm">
+          <div><dt class="font-semibold">Nome</dt><dd id="pName" class="text-slate-700"></dd></div>
+          <div><dt class="font-semibold">Email</dt><dd id="pEmail" class="text-slate-700"></dd></div>
+          <div class="sm:col-span-2"><dt class="font-semibold">Biografia</dt><dd id="pBio" class="text-slate-700"></dd></div>
+          <div class="sm:col-span-2"><dt class="font-semibold">Competenze</dt><dd id="pSkills" class="text-slate-700"></dd></div>
+          <div class="sm:col-span-2"><dt class="font-semibold">Behance</dt><dd><a id="pBehance" class="underline text-primary break-all" target="_blank" rel="noopener"></a></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- EmailJS (opzionale) — lasciare commentato finché non mi dai le chiavi
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      emailjs.init('PUBLIC_KEY');
+      // dentro handleSubmit: await emailjs.send('SERVICE_ID', 'TEMPLATE_ID', {...});
+    </script>
+    -->
+  </main>
+
+  <footer class="border-t border-line/70 py-6">
+    <div class="container max-w-3xl text-sm text-slate-500">
+      © <span id="year"></span> Elisa Riccardi — UX/UI
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" defer></script>
+  <script>
+    // bg segue mouse
+    window.addEventListener('mousemove', (e)=>{
+      const x = (e.clientX / innerWidth) * 100;
+      const y = (e.clientY / innerHeight) * 100;
+      document.documentElement.style.setProperty('--mx', x + '%');
+      document.documentElement.style.setProperty('--my', y + '%');
+    });
+    // anno
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ripristina da localStorage
+    const form = document.getElementById('contactForm');
+    const fields = ['name','bio','skills','behance','email','gdpr'];
+    const saved = JSON.parse(localStorage.getItem('elisa-contact')||'{}');
+    fields.forEach(k=>{
+      const el = document.getElementById(k);
+      if(!el) return;
+      if(k==='gdpr'){ el.checked = !!saved[k]; }
+      else if(saved[k]) el.value = saved[k];
+    });
+
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = {
+        name:  document.getElementById('name').value.trim(),
+        bio:   document.getElementById('bio').value.trim(),
+        skills:document.getElementById('skills').value.trim(),
+        behance:document.getElementById('behance').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        gdpr:  document.getElementById('gdpr').checked
+      };
+
+      // validazione semplice
+      const msg = document.getElementById('formMsg');
+      if(!data.name || !data.bio || !data.skills || !data.behance || !data.email || !data.gdpr){
+        msg.textContent = 'Compila tutti i campi e accetta il consenso GDPR.';
+        msg.classList.remove('hidden'); msg.classList.remove('text-green-700'); msg.classList.add('text-red-700');
+        return;
+      }
+
+      // salva localmente
+      localStorage.setItem('elisa-contact', JSON.stringify(data));
+
+      // mostra anteprima
+      document.getElementById('pName').textContent = data.name;
+      document.getElementById('pEmail').textContent = data.email;
+      document.getElementById('pBio').textContent = data.bio;
+      document.getElementById('pSkills').textContent = data.skills;
+      const l = document.getElementById('pBehance'); l.textContent = data.behance; l.href = data.behance;
+
+      document.getElementById('preview').classList.remove('hidden');
+      msg.textContent = 'Dati acquisiti. Ti risponderò al più presto!';
+      msg.classList.remove('hidden'); msg.classList.remove('text-red-700'); msg.classList.add('text-green-700');
+
+      // scroll dolce all’anteprima
+      document.getElementById('preview').scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  </script>
+</body>
+</html>
