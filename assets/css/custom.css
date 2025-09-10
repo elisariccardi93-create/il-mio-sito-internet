@@ -1,0 +1,21 @@
+:root{
+  --brand-blue:#1E40AF;   /* AA su bianco */
+  --brand-orange:#EA580C; /* AA su bianco */
+}
+
+/* micro-animazione “press” sui bottoni */
+.button-press:active{ transform: translateY(1px); }
+
+/* reveal on scroll */
+.reveal{ opacity:0; transform:translateY(12px); transition: all .6s cubic-bezier(.2,.65,.3,1); }
+.reveal.in{ opacity:1; transform:none; }
+
+/* effetto cursore già presente */
+body::before{
+  content:"";
+  position:fixed;
+  top:var(--y,50%); left:var(--x,50%);
+  width:540px; height:540px;
+  background: radial-gradient(circle, rgba(30,64,175,.10) 0%, rgba(234,88,12,.08) 45%, transparent 75%);
+  pointer-events:none; transform:translate(-50%,-50%); z-index:0;
+}

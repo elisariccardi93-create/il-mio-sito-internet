@@ -1,190 +1,216 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elisa Riccardi — UX/UI Portfolio</title>
-  <link rel="icon" href="img/favicon.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elisa Riccardi | UX/UI Designer</title>
+  <meta name="description" content="Elisa Riccardi, UX/UI Designer in crescita. Rendo semplici le esperienze digitali. Scopri il mio portfolio e i miei progetti.">
+  <meta name="keywords" content="UX Designer, UI Designer, Portfolio, UX/UI, Figma, Web Design, Elisa Riccardi">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Elisa Riccardi | UX/UI Designer">
+  <meta property="og:description" content="UX/UI Designer in crescita, rendo semplici le esperienze digitali.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tuosito.com">
 
-  <!-- Font Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 
-  <!-- Tailwind CDN -->
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    /* Tailwind config: palette fredda, font Inter, container centrato */
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
-          colors: {
-            primary: '#4F6EE0',   // blu freddo accessibile
-            ink: '#0f172a',      // slate-900
-            soft: '#f8fafc',     // slate-50
-            line: '#e2e8f0'      // slate-200
-          },
-          boxShadow: {
-            soft: '0 10px 30px rgba(15,23,42,0.06)'
-          }
-        },
-        container: { center: true, padding: '1rem' }
-      }
-    }
-  </script>
 
-  <!-- Font Awesome (icone SVG via CSS classes) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+<!-- Font Awesome (icone social) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-  <style>
-    /* Effetto background che segue il cursore (subtle, rispettoso di prefers-reduced-motion) */
-    :root { --mx: 50%; --my: 50%; }
-    .mouse-bg::before{
-      content:"";
-      position:fixed; inset:0; pointer-events:none; z-index:-1;
-      background:
-        radial-gradient(600px circle at var(--mx) var(--my),
-          rgba(79,110,224,.12), transparent 60%);
-      transition: background-position .2s ease-out;
-    }
-    @media (prefers-reduced-motion: reduce){
-      .mouse-bg::before{ background: none; }
-    }
-    /* Focus visibile sempre (WCAG) */
-    :focus-visible{ outline: 3px solid #4F6EE0; outline-offset: 2px; border-radius: 6px; }
-  </style>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
 </head>
+<body class="bg-white text-gray-900 font-inter relative overflow-x-hidden">
 
-<body class="mouse-bg bg-white text-ink font-sans antialiased">
-  <!-- Navbar sticky -->
-  <header class="sticky top-0 z-50 border-b border-line/70 bg-white/80 backdrop-blur">
-    <nav class="container max-w-3xl flex items-center justify-between py-3">
-      <a href="index.html" class="inline-flex items-center gap-2 font-extrabold tracking-tight text-ink">
-        <span class="inline-grid place-items-center w-8 h-8 rounded bg-primary text-white text-sm font-bold">ER</span>
-        <span class="hidden sm:inline">Elisa Riccardi</span>
-      </a>
-      <ul class="flex items-center gap-4 text-sm">
-        <li><a class="px-2 py-1 rounded hover:bg-soft transition" href="#home">Home</a></li>
-        <li><a class="px-2 py-1 rounded hover:bg-soft transition" href="#work">Work</a></li>
-        <li><a class="px-2 py-1 rounded hover:bg-soft transition" href="contattami.html">Contattami</a></li>
-        <li><a class="px-2 py-1 rounded hover:bg-soft transition" target="_blank" rel="noopener" href="https://www.behance.net/elisariccardi1">Behance</a></li>
-      </ul>
+<!-- Navbar -->
+<header class="sticky top-0 w-full bg-white/95 backdrop-blur shadow-sm z-50">
+  <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="text-2xl font-extrabold tracking-tight text-blue-800">ER</a>
+    <nav class="hidden md:flex gap-6 font-semibold text-slate-700">
+      <a href="index.html" class="hover:text-blue-800 transition">Home</a>
+      <a href="work.html" class="hover:text-blue-800 transition">Work</a>
+      <a href="cv.html" class="hover:text-blue-800 transition">CV</a>
+      <a href="contattami.html" class="hover:text-blue-800 transition">Contattami</a>
+      <a href="https://www.behance.net/elisariccardi1" target="_blank" class="hover:text-blue-800 transition">Behance</a>
     </nav>
-  </header>
 
-  <main id="home" class="container max-w-3xl">
-    <!-- Hero: layout Apple-like, minimal -->
-    <section class="grid md:grid-cols-2 gap-8 items-center py-12 md:py-16">
-      <div>
-        <h1 class="text-4xl/tight md:text-5xl font-extrabold tracking-tight">
-          Ciao, sono Elisa —<br class="hidden md:block" />
-          <span class="text-primary">Junior UX/UI Designer</span>
-        </h1>
-        <p class="mt-4 text-slate-600">
-          Creativa e personale, unisco <strong>esperienza in grafica e comunicazione</strong>
-          alla pratica UX: wireframe, UI system, prototipi e attenzione all’<strong>accessibilità (WCAG)</strong>.
-        </p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#work" class="inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded shadow-soft hover:opacity-90 transition">
-            <i class="fa-solid fa-grid-2"></i><span>Competenze & Metodi</span>
-          </a>
-          <a href="contattami.html" class="inline-flex items-center gap-2 border border-line px-4 py-2 rounded hover:bg-soft transition">
-            <i class="fa-regular fa-paper-plane"></i><span>Scrivimi</span>
-          </a>
+    <div class="relative md:hidden">
+      <button id="menu-toggle"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-300 text-slate-800 hover:bg-slate-50 transition"
+              aria-label="Apri menù" aria-haspopup="true" aria-expanded="false" aria-controls="menu-dropdown">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div id="menu-dropdown"
+           class="absolute right-0 mt-2 w-56 origin-top-right rounded-2xl bg-white shadow-lg ring-1 ring-black/5 divide-y divide-slate-100
+                  opacity-0 scale-95 pointer-events-none transition"
+           role="menu" aria-labelledby="menu-toggle">
+        <div class="py-1">
+          <a href="index.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Home</a>
+          <a href="work.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Work</a>
+          <a href="cv.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">CV</a>
+          <a href="contattami.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Contattami</a>
         </div>
-
-        <!-- Social -->
-        <div class="mt-6 flex items-center gap-4 text-slate-500">
-          <a class="hover:text-primary transition" aria-label="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/elisariccardi_/"><i class="fa-brands fa-instagram"></i></a>
-          <a class="hover:text-primary transition" aria-label="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/share/19QQPsEwkV/?mibextid=wwXIfr"><i class="fa-brands fa-facebook"></i></a>
-          <a class="hover:text-primary transition" aria-label="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/elisa-riccardi-4a3a74b9/"><i class="fa-brands fa-linkedin"></i></a>
-          <a class="hover:text-primary transition" aria-label="Behance" target="_blank" rel="noopener" href="https://www.behance.net/elisariccardi1"><i class="fa-brands fa-behance"></i></a>
+        <div class="py-1">
+          <a href="https://www.behance.net/elisariccardi1" target="_blank" class="block px-4 py-2 text-blue-800 font-semibold hover:bg-slate-50" role="menuitem">Behance</a>
         </div>
       </div>
-
-      <div class="md:justify-self-end">
-        <img src="img/hero-elisa.jpg" alt="Elisa Riccardi" class="w-full max-w-sm md:max-w-md rounded-xl shadow-soft object-cover" />
-      </div>
-    </section>
-
-    <!-- Work/skills: niente progetti, solo competenze + link Behance -->
-    <section id="work" class="py-12 border-t border-line/70">
-      <h2 class="text-2xl font-bold">Cosa so fare</h2>
-      <p class="mt-2 text-slate-600">Toolkit e metodi che porto nei progetti.</p>
-
-      <!-- Grid responsive di “pill” con hover -->
-      <ul class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
-        <li class="border border-line rounded-md px-3 py-2 hover:bg-soft transition">UX Research (desk & light testing)</li>
-        <li class="border border-line rounded-md px-3 py-2 hover:bg-soft transition">Personas & User Journey</li>
-        <li class="border border-line rounded-md px-3 py-2 hover:bg-soft transition">Wireframe & Flow</li>
-        <li class="border border-line rounded-md px-3 py-2 hover:bg-soft transition">UI Design (Design System)</li>
-        <li class="border border-line rounded-md px-3 py-2 hover:bg-soft transition">Prototipazione (Figma)</li>
-        <li class="border border-line rounded-md px-3 py-2 hover:bg-soft transition">Accessibilità (WCAG)</li>
-        <li class="border border-line rounded-md px-3 py-2 hover:bg-soft transition">Microcopy & Content</li>
-        <li class="border border-line rounded-md px-3 py-2 hover:bg-soft transition">Handoff Dev (spec/asset)</li>
-        <li class="border border-line rounded-md px-3 py-2 hover:bg-soft transition">Brand & Visual</li>
-      </ul>
-
-      <div class="mt-8 flex flex-wrap items-center gap-3">
-        <a target="_blank" rel="noopener"
-           href="https://www.behance.net/elisariccardi1"
-           class="inline-flex items-center gap-2 px-4 py-2 rounded border border-line hover:bg-soft transition">
-          <i class="fa-brands fa-behance"></i><span>Vedi progetti su Behance</span>
-        </a>
-        <a href="cv.html" class="inline-flex items-center gap-2 px-4 py-2 rounded bg-primary text-white shadow-soft hover:opacity-90 transition">
-          <i class="fa-regular fa-file-lines"></i><span>Guarda il mio CV</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Call to action contatti -->
-    <section class="py-12 border-t border-line/70">
-      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
-          <h3 class="text-xl font-bold">Ti va di sentirci?</h3>
-          <p class="text-slate-600">Raccontami il tuo progetto o la tua azienda.</p>
-        </div>
-        <a href="contattami.html" class="inline-flex items-center gap-2 px-4 py-2 rounded bg-primary text-white shadow-soft hover:opacity-90 transition">
-          <i class="fa-regular fa-paper-plane"></i><span>Contattami</span>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-t border-line/70 py-6">
-    <div class="container max-w-3xl text-sm text-slate-500 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-      <p>© <span id="year"></span> Elisa Riccardi — UX/UI</p>
-      <p class="flex items-center gap-3">
-        <a class="hover:text-primary transition" href="cv.html">CV</a>
-        <a class="hover:text-primary transition" href="contattami.html">Contattami</a>
-        <a class="hover:text-primary transition" target="_blank" rel="noopener" href="https://www.behance.net/elisariccardi1">Behance</a>
-      </p>
     </div>
+  </div>
+</header>
+
+
+<!-- HERO nuovo -->
+<section class="pt-28 md:pt-36 pb-12 max-w-5xl mx-auto px-6 relative z-10">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    <!-- Testo -->
+    <div>
+      <span class="inline-flex items-center gap-2 bg-blue-50 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2.5 7L12 16l-7 4 2.5-7L2 9h7z"/></svg>
+        UX/UI Designer
+      </span>
+      <h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+        Progetto prodotti digitali <span class="text-blue-800">chiari</span> e
+        <span class="text-orange-600">memorabili</span>.
+      </h1>
+      <p class="mt-5 text-lg text-slate-600 max-w-prose">
+        Sono Elisa Riccardi, UX/UI Designer in crescita. Trasformo obiettivi
+        di business in interfacce accessibili, pulite e facili da usare.
+      </p>
+
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="work.html"
+           class="inline-flex items-center justify-center bg-blue-800 text-white px-6 py-3 rounded-xl font-semibold hover:translate-y-[-2px] hover:shadow-lg transition">
+          Guarda i lavori
+        </a>
+        <a href="https://www.behance.net/elisariccardi1" target="_blank"
+           class="inline-flex items-center justify-center border border-slate-300 text-slate-800 px-6 py-3 rounded-xl font-semibold hover:bg-slate-50 transition">
+          Behance
+        </a>
+      </div>
+    </div>
+
+    <!-- Foto grande -->
+    <div class="relative">
+      <div class="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-blue-50 via-white to-orange-50"></div>
+      <img src="assets/img/ritratto-elisa.riccardi.jpg"
+           alt="Ritratto di Elisa Riccardi, UX/UI designer, sorridente in una via cittadina con fiori accanto."
+           class="w-full h-[440px] object-cover rounded-3xl shadow-xl">
+    </div>
+  </div>
+</section>
+
+<!-- PROGETTI (card più grandi con micro-animazioni) -->
+<section class="py-16 md:py-20 max-w-5xl mx-auto px-6">
+  <div class="flex items-end justify-between mb-8">
+    <h2 class="text-3xl font-bold text-slate-900">Progetti in evidenza</h2>
+    <a href="work.html" class="text-blue-800 font-semibold hover:underline">Vedi tutti →</a>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-7">
+    <!-- Card -->
+    <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform-gpu hover:translate-y-[-4px]">
+      <div class="overflow-hidden">
+        <img src="assets/img/laserteam.jpg" alt="Rebranding Laser Team: nuovo logo e identità visiva"
+             class="h-56 w-full object-cover group-hover:scale-[1.03] transition">
+      </div>
+      <div class="p-5">
+        <h3 class="font-semibold text-lg text-slate-900">Rebranding Laser Team</h3>
+        <p class="mt-1 text-sm text-slate-600">Identità visiva rinnovata, manuale di brand e UX coerente.</p>
+        <a class="mt-4 inline-flex items-center gap-2 text-blue-800 font-semibold hover:gap-3 transition"
+           href="https://www.behance.net/elisariccardi1" target="_blank">Vedi su Behance
+           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform-gpu hover:translate-y-[-4px]">
+      <div class="overflow-hidden">
+        <img src="assets/img/pureheart.jpg" alt="Pure Heart: brand identity minimal e naturale"
+             class="h-56 w-full object-cover group-hover:scale-[1.03] transition">
+      </div>
+      <div class="p-5">
+        <h3 class="font-semibold text-lg text-slate-900">Pure Heart Identity</h3>
+        <p class="mt-1 text-sm text-slate-600">Brand system accessibile con colori naturali e tipografia morbida.</p>
+        <a class="mt-4 inline-flex items-center gap-2 text-blue-800 font-semibold hover:gap-3 transition"
+           href="https://www.behance.net/elisariccardi1" target="_blank">Vedi su Behance
+           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform-gpu hover:translate-y-[-4px]">
+      <div class="overflow-hidden">
+        <img src="assets/img/lanterne.jpg" alt="Festival delle Lanterne: poster e UX per evento culturale"
+             class="h-56 w-full object-cover group-hover:scale-[1.03] transition">
+      </div>
+      <div class="p-5">
+        <h3 class="font-semibold text-lg text-slate-900">Lantern Festival UX</h3>
+        <p class="mt-1 text-sm text-slate-600">Interfacce e materiali per un evento culturale.</p>
+        <a class="mt-4 inline-flex items-center gap-2 text-blue-800 font-semibold hover:gap-3 transition"
+           href="https://www.behance.net/elisariccardi1" target="_blank">Vedi su Behance
+           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/></svg>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section class="py-14 md:py-16 max-w-5xl mx-auto px-6 reveal">
+  <div class="rounded-3xl bg-gradient-to-br from-blue-50 via-white to-orange-50 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Connettiti con me</h2>
+      <p class="mt-2 text-slate-600">Seguimi sui social o scrivimi per collaborazioni.</p>
+    </div>
+
+    <div class="flex items-center gap-4 md:gap-5">
+      <a class="group inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white shadow hover:shadow-lg transition"
+         href="https://www.instagram.com/elisariccardi_?igsh=eXd6a21pZ2pscGhn&utm_source=qr" target="_blank" aria-label="Instagram di Elisa Riccardi">
+        <i class="fa-brands fa-instagram text-2xl text-slate-700 group-hover:text-blue-600 transition"></i>
+        <span class="sr-only">Instagram</span>
+      </a>
+
+      <a class="group inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white shadow hover:shadow-lg transition"
+         href="https://www.facebook.com/share/19QQPsEwkV/?mibextid=wwXIfr" target="_blank" aria-label="Facebook di Elisa Riccardi">
+        <i class="fa-brands fa-facebook-f text-2xl text-slate-700 group-hover:text-blue-800 transition"></i>
+        <span class="sr-only">Facebook</span>
+      </a>
+
+      <a class="group inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white shadow hover:shadow-lg transition"
+         href="https://www.linkedin.com/in/elisa-riccardi-4a3a74b9/" target="_blank" aria-label="LinkedIn di Elisa Riccardi">
+        <i class="fa-brands fa-linkedin-in text-2xl text-slate-700 group-hover:text-blue-800 transition"></i>
+        <span class="sr-only">LinkedIn</span>
+      </a>
+
+      <a class="group inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white shadow hover:shadow-lg transition"
+         href="https://www.behance.net/elisariccardi1" target="_blank" aria-label="Behance di Elisa Riccardi">
+        <i class="fa-brands fa-behance text-2xl text-slate-700 group-hover:text-blue-800 transition"></i>
+        <span class="sr-only">Behance</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-sm text-gray-600">
+    © 2025 Elisa Riccardi · UX/UI Designer
   </footer>
 
-  <!-- JS: anno, smooth scroll, background che segue il mouse -->
-  <script>
-    // Anno corrente
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Smooth scroll per anchor link interni
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id = a.getAttribute('href');
-        const el = document.querySelector(id);
-        if(el){
-          e.preventDefault();
-          el.scrollIntoView({behavior:'smooth', block:'start'});
-        }
-      })
-    });
-
-    // Effetto bg che segue il cursore
-    window.addEventListener('mousemove', (e)=>{
-      const x = (e.clientX / window.innerWidth) * 100;
-      const y = (e.clientY / window.innerHeight) * 100;
-      document.documentElement.style.setProperty('--mx', x + '%');
-      document.documentElement.style.setProperty('--my', y + '%');
-    });
-  </script>
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

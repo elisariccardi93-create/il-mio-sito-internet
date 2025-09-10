@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Progetti | Elisa Riccardi</title>
+  <meta name="description" content="Portfolio di Elisa Riccardi, UX/UI Designer. Selezione di lavori tra UX, UI e brand identity." />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+<body class="bg-white text-slate-900 font-inter relative overflow-x-hidden">
+
+  <!-- HEADER nuovo (dropdown) -->
+  <header class="sticky top-0 w-full bg-white/95 backdrop-blur shadow-sm z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-extrabold tracking-tight text-blue-800">ER</a>
+
+      <nav class="hidden md:flex gap-6 font-semibold text-slate-700">
+        <a href="index.html" class="hover:text-blue-800 transition">Home</a>
+        <a href="work.html" class="hover:text-blue-800 transition">Work</a>
+        <a href="cv.html" class="hover:text-blue-800 transition">CV</a>
+        <a href="contattami.html" class="hover:text-blue-800 transition">Contattami</a>
+        <a href="https://www.behance.net/elisariccardi1" target="_blank" class="hover:text-blue-800 transition">Behance</a>
+      </nav>
+
+      <div class="relative md:hidden">
+        <button id="menu-toggle"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-300 text-slate-800 hover:bg-slate-50 transition"
+                aria-label="Apri menù" aria-haspopup="true" aria-expanded="false" aria-controls="menu-dropdown">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div id="menu-dropdown"
+             class="absolute right-0 mt-2 w-56 origin-top-right rounded-2xl bg-white shadow-lg ring-1 ring-black/5 divide-y divide-slate-100
+                    opacity-0 scale-95 pointer-events-none transition"
+             role="menu" aria-labelledby="menu-toggle">
+          <div class="py-1">
+            <a href="index.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Home</a>
+            <a href="work.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Work</a>
+            <a href="cv.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">CV</a>
+            <a href="contattami.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Contattami</a>
+          </div>
+          <div class="py-1">
+            <a href="https://www.behance.net/elisariccardi1" target="_blank" class="block px-4 py-2 text-blue-800 font-semibold hover:bg-slate-50" role="menuitem">Behance</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-28 md:pt-36 pb-10 max-w-5xl mx-auto px-6 text-center">
+    <h1 class="text-4xl font-bold mb-3">I miei progetti</h1>
+    <p class="text-lg text-slate-600">Una selezione che unisce ricerca UX, design system e creatività visiva.</p>
+  </section>
+
+  <!-- GRID -->
+  <section class="pb-20 max-w-5xl mx-auto px-6">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-7">
+      <!-- 1 -->
+      <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform-gpu hover:translate-y-[-4px]">
+        <img src="assets/img/laserteam.jpg" alt="Rebranding Laser Team: nuovo logo e identità visiva" class="h-48 w-full object-cover group-hover:scale-[1.03] transition">
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Rebranding Laser Team</h3>
+          <p class="mt-1 text-sm text-slate-600">Identità rinnovata, manuale brand e UX coerente.</p>
+          <a href="https://www.behance.net/elisariccardi1" target="_blank" class="mt-3 inline-flex items-center gap-2 text-blue-800 font-semibold hover:gap-3 transition">Vedi su Behance
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform-gpu hover:translate-y-[-4px]">
+        <img src="assets/img/pureheart.jpg" alt="Pure Heart: brand identity minimal e naturale" class="h-48 w-full object-cover group-hover:scale-[1.03] transition">
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Pure Heart Identity</h3>
+          <p class="mt-1 text-sm text-slate-600">Brand system accessibile con palette naturali.</p>
+          <a href="https://www.behance.net/elisariccardi1" target="_blank" class="mt-3 inline-flex items-center gap-2 text-blue-800 font-semibold hover:gap-3 transition">Vedi su Behance
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform-gpu hover:translate-y-[-4px]">
+        <img src="assets/img/lanterne.jpg" alt="Festival delle Lanterne: poster e UX per evento culturale" class="h-48 w-full object-cover group-hover:scale-[1.03] transition">
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Lantern Festival UX</h3>
+          <p class="mt-1 text-sm text-slate-600">Interfacce e materiali per un evento culturale.</p>
+          <a href="https://www.behance.net/elisariccardi1" target="_blank" class="mt-3 inline-flex items-center gap-2 text-blue-800 font-semibold hover:gap-3 transition">Vedi su Behance
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform-gpu hover:translate-y-[-4px]">
+        <img src="assets/img/fb.jpg" alt="Creatività visual per campagne social" class="h-48 w-full object-cover group-hover:scale-[1.03] transition">
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Social Design</h3>
+          <p class="mt-1 text-sm text-slate-600">Creatività per campagne ad alto impatto.</p>
+          <a href="https://www.behance.net/elisariccardi1" target="_blank" class="mt-3 inline-flex items-center gap-2 text-blue-800 font-semibold hover:gap-3 transition">Vedi su Behance
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform-gpu hover:translate-y-[-4px]">
+        <img src="assets/img/storia-1.jpg" alt="Storytelling visivo e illustrazione" class="h-48 w-full object-cover group-hover:scale-[1.03] transition">
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Storytelling Visivo</h3>
+          <p class="mt-1 text-sm text-slate-600">Narrazione visiva con illustrazioni.</p>
+          <a href="https://www.behance.net/elisariccardi1" target="_blank" class="mt-3 inline-flex items-center gap-2 text-blue-800 font-semibold hover:gap-3 transition">Vedi su Behance
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform-gpu hover:translate-y-[-4px]">
+        <img src="assets/img/post-1.jpg" alt="Visual digital per campagne online" class="h-48 w-full object-cover group-hover:scale-[1.03] transition">
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Visual Digital Campaign</h3>
+          <p class="mt-1 text-sm text-slate-600">Post e grafiche ottimizzate per social.</p>
+          <a href="https://www.behance.net/elisariccardi1" target="_blank" class="mt-3 inline-flex items-center gap-2 text-blue-800 font-semibold hover:gap-3 transition">Vedi su Behance
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-sm text-slate-600">© 2025 Elisa Riccardi · UX/UI Designer</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
