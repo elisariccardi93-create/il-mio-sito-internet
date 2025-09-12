@@ -38,7 +38,43 @@
 <body class="bg-white text-gray-900 font-inter relative overflow-x-hidden">
 
 <!-- Navbar -->
+<header class="sticky top-0 w-full bg-white/95 backdrop-blur shadow-sm z-50">
+  <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="text-2xl font-extrabold tracking-tight text-blue-800">ER</a>
+    <nav class="hidden md:flex gap-6 font-semibold text-slate-700">
+      <a href="index.html" class="hover:text-blue-800 transition">Home</a>
+      <a href="work.html" class="hover:text-blue-800 transition">Work</a>
+      <a href="cv.html" class="hover:text-blue-800 transition">CV</a>
+      <a href="contattami.html" class="hover:text-blue-800 transition">Contattami</a>
+      <a href="https://www.behance.net/elisariccardi1" target="_blank" class="hover:text-blue-800 transition">Behance</a>
+    </nav>
 
+    <div class="relative md:hidden">
+      <button id="menu-toggle"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-300 text-slate-800 hover:bg-slate-50 transition"
+              aria-label="Apri menù" aria-haspopup="true" aria-expanded="false" aria-controls="menu-dropdown">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div id="menu-dropdown"
+           class="absolute right-0 mt-2 w-56 origin-top-right rounded-2xl bg-white shadow-lg ring-1 ring-black/5 divide-y divide-slate-100
+                  opacity-0 scale-95 pointer-events-none transition"
+           role="menu" aria-labelledby="menu-toggle">
+        <div class="py-1">
+          <a href="index.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Home</a>
+          <a href="work.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Work</a>
+          <a href="cv.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">CV</a>
+          <a href="contattami.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Contattami</a>
+        </div>
+        <div class="py-1">
+          <a href="https://www.behance.net/elisariccardi1" target="_blank" class="block px-4 py-2 text-blue-800 font-semibold hover:bg-slate-50" role="menuitem">Behance</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
 
 <!-- HERO nuovo -->
