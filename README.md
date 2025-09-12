@@ -15,24 +15,32 @@ Design minimal, palette **blu/arancio** ad alto contrasto, micro-animazioni e me
 ## 📂 Struttura
 
 /portfolio-elisa
-├── index.html # Home (hero 2-colonne, progetti in evidenza, social)
-├── work.html # Griglia progetti (Grid System)
-├── cv.html # CV in HTML (timeline, skills, placeholder immagini)
-├── contattami.html # Form contatti (conferma istantanea, no backend)
+├── index.html          # Home (hero 2-colonne, progetti in evidenza, social)
+├── work.html           # Griglia progetti (Grid System)
+├── cv.html             # CV in HTML (timeline, skills, placeholder immagini)
+├── contattami.html     # Form contatti (conferma istantanea, no backend)
+├── CV-Elisa-Riccardi.pdf
 │
 └── assets
-├── css
-│ └── custom.css # Effetto cursore, reveal, variabili colore
-├── img
-│ ├── ritratto-elisa.riccardi.jpg
-│ ├── laserteam.jpg
-│ ├── pureheart.jpg
-│ ├── lanterne.jpg
-│ ├── favicon.ico
-│ └── og-image.jpg (opzionale, per social)
-├── js
-│ └── main.js # Navbar mobile dropdown, reveal, form, cursor FX
-└── CV-Elisa-Riccardi.pdf
+    ├── css
+    │   └── custom.css  # Effetto cursore, reveal, variabili colore
+    ├── img
+    │   ├── ritratto-elisa.riccardi.jpg
+    │   ├── laserteam.jpg
+    │   ├── pureheart.jpg
+    │   ├── lanterne.jpg
+    │   ├── og-image.jpg           
+    │   ├── post-1.jpg
+    │   ├── storia-1.jpg
+    │   ├── fb.jpg
+    │   └── favicon/               # tutte le favicon qui
+    │       ├── android-chrome-512x512.png
+    │       ├── apple-touch-icon.png
+    │       ├── favicon-16x16.png
+    │       ├── favicon-32x32.png
+    │       └── favicon.ico
+    └── js
+        └── main.js     # Navbar mobile dropdown, reveal, form, cursor FX
 
 
 ## 🧩 Tecnologie
