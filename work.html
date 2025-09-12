@@ -1,6 +1,505 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elisa Riccardi | UX/UI Designer</title>
+  <meta name="description" content="Elisa Riccardi, UX/UI Designer in crescita. Rendo semplici le esperienze digitali. Scopri il mio portfolio e i miei progetti.">
+  <meta name="keywords" content="UX Designer, UI Designer, Portfolio, UX/UI, Figma, Web Design, Elisa Riccardi">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Elisa Riccardi | UX/UI Designer">
+  <meta property="og:description" content="UX/UI Designer in crescita, rendo semplici le esperienze digitali.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tuosito.com">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Font Awesome (icone social) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-white text-gray-900 font-inter relative overflow-x-hidden">
+
+<!-- Navbar -->
+<header class="sticky top-0 w-full bg-white/95 backdrop-blur shadow-sm z-50">
+  <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="text-2xl font-extrabold tracking-tight text-blue-800">ER</a>
+    <nav class="hidden md:flex gap-6 font-semibold text-slate-700">
+      <a href="index.html" class="hover:text-blue-800 transition">Home</a>
+      <a href="work.html" class="hover:text-blue-800 transition">Work</a>
+      <a href="cv.html" class="hover:text-blue-800 transition">CV</a>
+      <a href="contattami.html" class="hover:text-blue-800 transition">Contattami</a>
+      <a href="https://www.behance.net/elisariccardi1" target="_blank" class="hover:text-blue-800 transition">Behance</a>
+    </nav>
+
+    <div class="relative md:hidden">
+      <button id="menu-toggle"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-300 text-slate-800 hover:bg-slate-50 transition"
+              aria-label="Apri menù" aria-haspopup="true" aria-expanded="false" aria-controls="menu-dropdown">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div id="menu-dropdown"
+           class="absolute right-0 mt-2 w-56 origin-top-right rounded-2xl bg-white shadow-lg ring-1 ring-black/5 divide-y divide-slate-100
+                  opacity-0 scale-95 pointer-events-none transition"
+           role="menu" aria-labelledby="menu-toggle">
+        <div class="py-1">
+          <a href="index.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Home</a>
+          <a href="work.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Work</a>
+          <a href="cv.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">CV</a>
+          <a href="contattami.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Contattami</a>
+        </div>
+        <div class="py-1">
+          <a href="https://www.behance.net/elisariccardi1" target="_blank" class="block px-4 py-2 text-blue-800 font-semibold hover:bg-slate-50" role="menuitem">Behance</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- HERO nuovo -->
+<section class="pt-28 md:pt-36 pb-12 max-w-5xl mx-auto px-6 relative z-10">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    <!-- Testo -->
+    <div>
+      <span class="inline-flex items-center gap-2 bg-blue-50 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2.5 7L12 16l-7 4 2.5-7L2 9h7z"/></svg>
+        UX/UI Designer
+      </span>
+      <h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+        Progetto prodotti digitali <span class="text-blue-800">chiari</span> e
+        <span class="text-orange-600">memorabili</span>.
+      </h1>
+      <p class="mt-5 text-lg text-slate-600 max-w-prose">
+        Sono Elisa Riccardi, UX/UI Designer in crescita. Trasformo obiettivi
+        di business in interfacce accessibili, pulite e facili da usare.
+      </p>
+
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="work.html"
+           class="inline-flex items-center justify-center bg-blue-800 text-white px-6 py-3 rounded-xl font-semibold hover:translate-y-[-2px] hover:shadow-lg transition">
+          Guarda i lavori
+        </a>
+        <a href="https://www.behance.net/elisariccardi1" target="_blank"
+           class="inline-flex items-center justify-center border border-slate-300 text-slate-800 px-6 py-3 rounded-xl font-semibold hover:bg-slate-50 transition">
+          Behance
+        </a>
+      </div>
+    </div>
+
+    <!-- Foto grande -->
+    <div class="relative">
+      <div class="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-blue-50 via-white to-orange-50"></div>
+      <img src="assets/img/ritratto-elisa.riccardi.jpg"
+           alt="Ritratto di Elisa Riccardi, UX/UI designer, sorridente in una via cittadina con fiori accanto."
+           class="w-full h-[440px] object-cover rounded-3xl shadow-xl">
+    </div>
+  </div>
+</section>
+
+<!-- PROGETTI (card più grandi con micro-animazioni) -->
+<section class="py-16 md:py-20 max-w-5xl mx-auto px-6">
+  <div class="flex items-end justify-between mb-8">
+    <h2 class="text-3xl font-bold text-slate-900">Progetti in evidenza</h2>
+    <a href="work.html" class="text-blue-800 font-semibold hover:underline">Vedi tutti →</a>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-7">
+    <!-- Card -->
+    <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform-gpu hover:translate-y-[-4px]">
+      <div class="overflow-hidden">
+        <img src="assets/img/laserteam.jpg" alt="Rebranding Laser Team: nuovo logo e identità visiva"
+             class="h-56 w-full object-cover group-hover:scale-[1.03] transition">
+      </div>
+      <div class="p-5">
+        <h3 class="font-semibold text-lg text-slate-900">Rebranding Laser Team</h3>
+        <p class="mt-1 text-sm text-slate-600">Identità visiva rinnovata, manuale di brand e UX coerente.</p>
+        <a class="mt-4 inline-flex items-center gap-2 text-blue-800 font-semibold hover:gap-3 transition"
+           href="https://www.behance.net/elisariccardi1" target="_blank">Vedi su Behance
+           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform-gpu hover:translate-y-[-4px]">
+      <div class="overflow-hidden">
+        <img src="assets/img/pureheart.jpg" alt="Pure Heart: brand identity minimal e naturale"
+             class="h-56 w-full object-cover group-hover:scale-[1.03] transition">
+      </div>
+      <div class="p-5">
+        <h3 class="font-semibold text-lg text-slate-900">Pure Heart Identity</h3>
+        <p class="mt-1 text-sm text-slate-600">Brand system accessibile con colori naturali e tipografia morbida.</p>
+        <a class="mt-4 inline-flex items-center gap-2 text-blue-800 font-semibold hover:gap-3 transition"
+           href="https://www.behance.net/elisariccardi1" target="_blank">Vedi su Behance
+           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition transform-gpu hover:translate-y-[-4px]">
+      <div class="overflow-hidden">
+        <img src="assets/img/lanterne.jpg" alt="Festival delle Lanterne: poster e UX per evento culturale"
+             class="h-56 w-full object-cover group-hover:scale-[1.03] transition">
+      </div>
+      <div class="p-5">
+        <h3 class="font-semibold text-lg text-slate-900">Lantern Festival UX</h3>
+        <p class="mt-1 text-sm text-slate-600">Interfacce e materiali per un evento culturale.</p>
+        <a class="mt-4 inline-flex items-center gap-2 text-blue-800 font-semibold hover:gap-3 transition"
+           href="https://www.behance.net/elisariccardi1" target="_blank">Vedi su Behance
+           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-7 7v-4H3v-6h11V3z"/></svg>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section class="py-14 md:py-16 max-w-5xl mx-auto px-6 reveal">
+  <div class="rounded-3xl bg-gradient-to-br from-blue-50 via-white to-orange-50 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Connettiti con me</h2>
+      <p class="mt-2 text-slate-600">Seguimi sui social o scrivimi per collaborazioni.</p>
+    </div>
+
+    <div class="flex items-center gap-4 md:gap-5">
+      <a class="group inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white shadow hover:shadow-lg transition"
+         href="https://www.instagram.com/elisariccardi_?igsh=eXd6a21pZ2pscGhn&utm_source=qr" target="_blank" aria-label="Instagram di Elisa Riccardi">
+        <i class="fa-brands fa-instagram text-2xl text-slate-700 group-hover:text-blue-600 transition"></i>
+        <span class="sr-only">Instagram</span>
+      </a>
+
+      <a class="group inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white shadow hover:shadow-lg transition"
+         href="https://www.facebook.com/share/19QQPsEwkV/?mibextid=wwXIfr" target="_blank" aria-label="Facebook di Elisa Riccardi">
+        <i class="fa-brands fa-facebook-f text-2xl text-slate-700 group-hover:text-blue-800 transition"></i>
+        <span class="sr-only">Facebook</span>
+      </a>
+
+      <a class="group inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white shadow hover:shadow-lg transition"
+         href="https://www.linkedin.com/in/elisa-riccardi-4a3a74b9/" target="_blank" aria-label="LinkedIn di Elisa Riccardi">
+        <i class="fa-brands fa-linkedin-in text-2xl text-slate-700 group-hover:text-blue-800 transition"></i>
+        <span class="sr-only">LinkedIn</span>
+      </a>
+
+      <a class="group inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white shadow hover:shadow-lg transition"
+         href="https://www.behance.net/elisariccardi1" target="_blank" aria-label="Behance di Elisa Riccardi">
+        <i class="fa-brands fa-behance text-2xl text-slate-700 group-hover:text-blue-800 transition"></i>
+        <span class="sr-only">Behance</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-sm text-gray-600">
+    © 2025 Elisa Riccardi · UX/UI Designer
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+CV.HTML
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curriculum Vitae | Elisa Riccardi</title>
+  <meta name="description" content="Curriculum di Elisa Riccardi: esperienze, formazione, competenze e soft skills." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+<body class="bg-white text-slate-900 font-inter relative overflow-x-hidden">
+
+  <!-- HEADER nuovo -->
+  <header class="sticky top-0 w-full bg-white/95 backdrop-blur shadow-sm z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-extrabold tracking-tight text-blue-800">ER</a>
+      <nav class="hidden md:flex gap-6 font-semibold text-slate-700">
+        <a href="index.html" class="hover:text-blue-800 transition">Home</a>
+        <a href="work.html" class="hover:text-blue-800 transition">Work</a>
+        <a href="cv.html" class="hover:text-blue-800 transition">CV</a>
+        <a href="contattami.html" class="hover:text-blue-800 transition">Contattami</a>
+        <a href="https://www.behance.net/elisariccardi1" target="_blank" class="hover:text-blue-800 transition">Behance</a>
+      </nav>
+
+      <div class="relative md:hidden">
+        <button id="menu-toggle"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-300 text-slate-800 hover:bg-slate-50 transition"
+                aria-label="Apri menù" aria-haspopup="true" aria-expanded="false" aria-controls="menu-dropdown">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div id="menu-dropdown"
+             class="absolute right-0 mt-2 w-56 origin-top-right rounded-2xl bg-white shadow-lg ring-1 ring-black/5 divide-y divide-slate-100
+                    opacity-0 scale-95 pointer-events-none transition"
+             role="menu" aria-labelledby="menu-toggle">
+          <div class="py-1">
+            <a href="index.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Home</a>
+            <a href="work.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Work</a>
+            <a href="cv.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">CV</a>
+            <a href="contattami.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Contattami</a>
+          </div>
+          <div class="py-1">
+            <a href="https://www.behance.net/elisariccardi1" target="_blank" class="block px-4 py-2 text-blue-800 font-semibold hover:bg-slate-50" role="menuitem">Behance</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-28 md:pt-36 pb-12 max-w-5xl mx-auto px-6 text-center">
+    <h1 class="text-4xl font-bold mb-2">Curriculum Vitae</h1>
+    <p class="text-lg text-slate-600">UX/UI & Graphic Designer · 13/08/1993</p>
+    <a href="assets/CV-Elisa-Riccardi.pdf" download class="inline-block mt-6 bg-blue-800 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-900 transition">Scarica PDF</a>
+  </section>
+
+  <!-- PROFILO -->
+  <section class="max-w-5xl mx-auto px-6 pb-14">
+    <h2 class="text-2xl font-bold mb-6 flex items-center gap-2"><i class="fa-solid fa-user-pen text-blue-800"></i> Profilo</h2>
+    <div class="grid md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-2">
+        <p class="text-slate-700 leading-relaxed mb-3">
+          La passione per il graphic design si è sviluppata con il tempo: cercavo un modo per esprimere creatività e gusto estetico.
+          Il mondo della comunicazione mi ha mostrato come unire questi aspetti tirando fuori il meglio di me.
+        </p>
+        <p class="text-slate-700 leading-relaxed mb-3">
+          Mi ritengo una persona solare e determinata. L’esperienza a contatto con il pubblico negli stagionali mi ha insegnato a gestire situazioni di forte stress.
+          Davanti a problemi o imprevisti mi impegno a trovare la soluzione migliore.
+        </p>
+        <p class="text-slate-700 leading-relaxed">
+          Mi piace imparare e rimanere aggiornata attraverso corsi mirati. Automunita e disponibile full-time.
+        </p>
+      </div>
+      <img src="https://via.placeholder.com/600x380?text=Workspace+%C2%B7+Design" alt="Scrivania minimal con strumenti di design" class="rounded-2xl shadow">
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section class="max-w-5xl mx-auto px-6 pb-14">
+    <h2 class="text-2xl font-bold mb-6 flex items-center gap-2"><i class="fa-solid fa-address-card text-blue-800"></i> Contatti</h2>
+    <div class="bg-gradient-to-br from-blue-50 via-white to-orange-50 rounded-2xl p-6 md:p-8">
+      <ul class="grid sm:grid-cols-3 gap-4 text-slate-700">
+        <li><strong>Cellulare:</strong> 349 7499634</li>
+        <li><strong>Email:</strong> <a href="mailto:elisa.riccardi.93@gmail.com" class="text-blue-800 hover:underline">elisa.riccardi.93@gmail.com</a></li>
+        <li><strong>Residenza:</strong> Bellaria Igea-Marina, RN</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ESPERIENZE -->
+  <section class="max-w-5xl mx-auto px-6 pb-14">
+    <h2 class="text-2xl font-bold mb-6 flex items-center gap-2"><i class="fa-solid fa-briefcase text-blue-800"></i> Esperienze Professionali</h2>
+    <div class="space-y-6 border-l-2 border-blue-800 pl-6">
+      <div>
+        <h3 class="font-semibold">Graphic Designer – DSGN Creative Studio</h3>
+        <p class="text-sm text-slate-600">2022 – 2023</p>
+        <p class="text-slate-700">Definizione obiettivi e strategia; brand identity, loghi, banner, grafiche social, newsletter e layout di stampa.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold">Graphic Designer – SpuntoLab</h3>
+        <p class="text-sm text-slate-600">2021 – 2022</p>
+        <p class="text-slate-700">Strategia di comunicazione, brand identity, grafiche per social e newsletter.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold">SMM – Social Fit</h3>
+        <p class="text-sm text-slate-600">2020 – 2021</p>
+        <p class="text-slate-700">Piano editoriale social, copy per canali social, DEM e blog.</p>
+      </div>
+    </div>
+    <img src="https://via.placeholder.com/1200x340?text=Creative+Process" alt="Immagine concettuale del processo creativo" class="mt-6 rounded-2xl shadow">
+  </section>
+
+  <!-- FORMAZIONE -->
+  <section class="max-w-5xl mx-auto px-6 pb-14">
+    <h2 class="text-2xl font-bold mb-6 flex items-center gap-2"><i class="fa-solid fa-graduation-cap text-blue-800"></i> Formazione</h2>
+    <div class="space-y-6 border-l-2 border-blue-800 pl-6">
+      <div>
+        <h3 class="font-semibold">Master in UX/UI Design – Start2Impact</h3>
+        <p class="text-sm text-slate-600">2023 – in corso</p>
+      </div>
+      <div>
+        <h3 class="font-semibold">Corso di Specializzazione in Digital Marketing – Start2Impact</h3>
+        <p class="text-sm text-slate-600">2021</p>
+      </div>
+      <div>
+        <h3 class="font-semibold">Laurea Triennale in Economia dell’Impresa – Università di Bologna</h3>
+        <p class="text-sm text-slate-600">2015 – 2019</p>
+      </div>
+      <div>
+        <h3 class="font-semibold">Diploma in Grafica Pubblicitaria – Istituto Iris Versari</h3>
+        <p class="text-sm text-slate-600">2007 – 2012</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="max-w-5xl mx-auto px-6 pb-20">
+    <h2 class="text-2xl font-bold mb-6 flex items-center gap-2"><i class="fa-solid fa-sparkles text-blue-800"></i> Skills & Lingue</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <p class="font-semibold">Adobe Creative Suite</p>
+        <ul class="text-slate-700 list-disc list-inside">
+          <li>Photoshop</li><li>Illustrator</li><li>InDesign</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold">UX/UI Tools</p>
+        <ul class="text-slate-700 list-disc list-inside">
+          <li>Figma</li><li>Adobe XD</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold">Lingue</p>
+        <p class="text-slate-700">Italiano: Madrelingua<br>Inglese: B1 intermedio</p>
+      </div>
+      <div>
+        <p class="font-semibold">Soft Skills</p>
+        <ul class="text-slate-700 list-disc list-inside">
+          <li>Creatività</li><li>Problem solving</li><li>Lavoro in team</li>
+          <li>Doti comunicative</li><li>Organizzazione</li><li>Empatia</li>
+          <li>Gestione del tempo</li><li>Flessibilità</li><li>Autocritica</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-sm text-slate-600">© 2025 Elisa Riccardi · UX/UI Designer</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+CONTATTAMI.HTML
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contattami | Elisa Riccardi</title>
+  <meta name="description" content="Contatta Elisa Riccardi, UX/UI Designer. Invia un messaggio per collaborazioni o progetti." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+<body class="bg-white text-slate-900 font-inter relative overflow-x-hidden">
+
+  <!-- HEADER nuovo -->
+  <header class="sticky top-0 w-full bg-white/95 backdrop-blur shadow-sm z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-extrabold tracking-tight text-blue-800">ER</a>
+      <nav class="hidden md:flex gap-6 font-semibold text-slate-700">
+        <a href="index.html" class="hover:text-blue-800 transition">Home</a>
+        <a href="work.html" class="hover:text-blue-800 transition">Work</a>
+        <a href="cv.html" class="hover:text-blue-800 transition">CV</a>
+        <a href="contattami.html" class="hover:text-blue-800 transition">Contattami</a>
+        <a href="https://www.behance.net/elisariccardi1" target="_blank" class="hover:text-blue-800 transition">Behance</a>
+      </nav>
+
+      <div class="relative md:hidden">
+        <button id="menu-toggle"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-300 text-slate-800 hover:bg-slate-50 transition"
+                aria-label="Apri menù" aria-haspopup="true" aria-expanded="false" aria-controls="menu-dropdown">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div id="menu-dropdown"
+             class="absolute right-0 mt-2 w-56 origin-top-right rounded-2xl bg-white shadow-lg ring-1 ring-black/5 divide-y divide-slate-100
+                    opacity-0 scale-95 pointer-events-none transition"
+             role="menu" aria-labelledby="menu-toggle">
+          <div class="py-1">
+            <a href="index.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Home</a>
+            <a href="work.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Work</a>
+            <a href="cv.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">CV</a>
+            <a href="contattami.html" class="block px-4 py-2 text-slate-800 hover:bg-slate-50" role="menuitem">Contattami</a>
+          </div>
+          <div class="py-1">
+            <a href="https://www.behance.net/elisariccardi1" target="_blank" class="block px-4 py-2 text-blue-800 font-semibold hover:bg-slate-50" role="menuitem">Behance</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-28 md:pt-36 pb-10 max-w-5xl mx-auto px-6 text-center">
+    <h1 class="text-4xl font-bold mb-3">Contattami</h1>
+    <p class="text-lg text-slate-600">Vuoi collaborare con me o discutere di un progetto? Scrivimi qui sotto.</p>
+  </section>
+
+  <!-- FORM -->
+  <section class="max-w-3xl mx-auto px-6 pb-20">
+    <form id="contact-form" class="space-y-6 bg-white shadow-md rounded-2xl p-8">
+      <div>
+        <label for="name" class="block font-semibold mb-2">Nome</label>
+        <input type="text" id="name" name="name" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-800 outline-none">
+      </div>
+      <div>
+        <label for="email" class="block font-semibold mb-2">Email</label>
+        <input type="email" id="email" name="email" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-800 outline-none">
+      </div>
+      <div>
+        <label for="skills" class="block font-semibold mb-2">Competenze</label>
+        <input type="text" id="skills" name="skills" placeholder="Es. UX, UI, Branding" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-800 outline-none">
+      </div>
+      <div>
+        <label for="behance" class="block font-semibold mb-2">Link Behance</label>
+        <input type="url" id="behance" name="behance" placeholder="https://www.behance.net/..." class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-800 outline-none">
+      </div>
+      <div>
+        <label for="message" class="block font-semibold mb-2">Messaggio</label>
+        <textarea id="message" name="message" rows="4" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-800 outline-none"></textarea>
+      </div>
+      <div class="flex items-center gap-2">
+        <input type="checkbox" id="privacy" required class="w-4 h-4">
+        <label for="privacy" class="text-sm text-slate-600">Acconsento al trattamento dei dati secondo la normativa GDPR.</label>
+      </div>
+      <button type="submit" class="w-full bg-blue-800 text-white font-semibold py-3 rounded-xl hover:bg-blue-900 transition">Invia</button>
+    </form>
+
+    <div id="confirmation" class="hidden mt-6 p-4 bg-blue-100 text-blue-800 rounded-lg shadow text-center">
+      Grazie per avermi scritto! Ti risponderò al più presto.
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-sm text-slate-600">© 2025 Elisa Riccardi · UX/UI Designer</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+WORK.HTML
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio Progetti | Elisa Riccardi</title>
